@@ -46,11 +46,22 @@ const Ecommerce = () => {
                     <span className="text-lg fonr-semibold"> {item.amount}</span>
                     <span className={`text-sm text-${item.pcColor} ml-2`}>{item.percentage}</span>            
                    </p>
-                
+                <p className='text-sm text-gray-400 mt-1'>{item.title}</p>
             </div>
             ))}
           </div>
+
         </div>
+        <div className="flex gap-10 flex-wrap justify-center">
+          <div className="bg-white
+           dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 
+          rounded-2xl md:w-780">
+
+          </div>
+              
+          
+        </div>           
+
     
     </div>
   )
