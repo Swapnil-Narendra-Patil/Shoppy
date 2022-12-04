@@ -21,11 +21,11 @@ const Ecommerce = () => {
   return (
     <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg bg-gradient-to-r from-purple-500 to-pink-500 h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3  bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$63,448.78</p>
+              <p className="font-bold text-white">Earnings</p>
+              <p className="text-2xl text-white">$63,448.78</p>
             </div>
             <button
               type="button"
@@ -100,6 +100,17 @@ const Ecommerce = () => {
                   <span className="text-3xl font-semibold">$48,000</span>
                 </p>
                 <p className='text-gray-500 mt-1'>Expense</p>
+              </div>
+              <div className="mt-5">
+                <SparkLine 
+                currentColor="blue"
+                id="line-sparkline"
+                type="Line"
+                height="80px"
+                width="250px"
+                data={SparklineAreaData}
+                color="blue"
+                />
               </div>
             </div>
           </div>
