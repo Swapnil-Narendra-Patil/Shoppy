@@ -1,17 +1,33 @@
-import React from 'react';
-import { BsCurrencyDollar } from 'react-icons/bs';
-import { GoPrimitiveDot } from 'react-icons/go';
-import { IoIosMore } from 'react-icons/io';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import React from "react";
+import { BsCurrencyDollar } from "react-icons/bs";
+import { GoPrimitiveDot } from "react-icons/go";
+import { IoIosMore } from "react-icons/io";
+import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 
-import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
-import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
-import { useStateContext } from '../contexts/ContextProvider';
-import product9 from '../data/product9.jpg';
+import { Stacked, Pie, Button, LineChart, SparkLine } from "../components";
+import {
+  earningData,
+  medicalproBranding,
+  recentTransactions,
+  weeklyStats,
+  dropdownData,
+  SparklineAreaData,
+  ecomPieChartData,
+} from "../data/dummy";
+import { useStateContext } from "../contexts/ContextProvider";
+import product9 from "../data/product9.jpg";
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
-    <DropDownListComponent id="time" fields={{ text: 'Time', value: 'Id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value="1" dataSource={dropdownData} popupHeight="220px" popupWidth="120px" />
+    <DropDownListComponent
+      id="time"
+      fields={{ text: "Time", value: "Id" }}
+      style={{ border: "none", color: currentMode === "Dark" && "white" }}
+      value="1"
+      dataSource={dropdownData}
+      popupHeight="220px"
+      popupWidth="120px"
+    />
   </div>
 );
 
@@ -46,7 +62,10 @@ const Ecommerce = () => {
         </div>
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           {earningData.map((item) => (
-            <div key={item.title} className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl ">
+            <div
+              key={item.title}
+              className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl "
+            >
               <button
                 type="button"
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -90,26 +109,30 @@ const Ecommerce = () => {
               <div>
                 <p>
                   <span className="text-3xl font-semibold">$93,438</span>
-                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer -text-white bg-green-400
-                  rounded-full ml-3 text-xs">23%</span>
+                  <span
+                    className="p-1.5 hover:drop-shadow-xl cursor-pointer -text-white bg-green-400
+                  rounded-full ml-3 text-xs"
+                  >
+                    23%
+                  </span>
                 </p>
-                <p className='text-gray-500 mt-1'>Budget</p>
+                <p className="text-gray-500 mt-1">Budget</p>
               </div>
-              <div className='mt-8'>
+              <div className="mt-8">
                 <p>
                   <span className="text-3xl font-semibold">$48,000</span>
                 </p>
-                <p className='text-gray-500 mt-1'>Expense</p>
+                <p className="text-gray-500 mt-1">Expense</p>
               </div>
               <div className="mt-5">
-                <SparkLine 
-                currentColor="blue"
-                id="line-sparkline"
-                type="Line"
-                height="80px"
-                width="250px"
-                data={SparklineAreaData}
-                color="blue"
+                <SparkLine
+                  currentColor="blue"
+                  id="line-sparkline"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color="blue"
                 />
               </div>
             </div>
@@ -121,3 +144,6 @@ const Ecommerce = () => {
 };
 
 export default Ecommerce;
+
+
+
