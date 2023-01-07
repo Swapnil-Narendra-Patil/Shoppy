@@ -1,27 +1,9 @@
 import React from "react";
-import {
-  ChartComponent,
-  SeriesDirective,
-  SeriesCollectionDirective,
-  Inject,
-  Legend,
-  Category,
-  StackingColumnSeries,
-  Tooltip,
-} from "@syncfusion/ej2-react-charts";
-
-import {
-  stackedCustomSeries,
-  stackedPrimaryXAxis,
-  stackedPrimaryYAxis,
-} from "../../data/dummy";
+import {ChartComponent,SeriesCollectionDirective,SeriesDirective, Inject,Legend,Category, stackingColumnseires, Tooltip} from "@syncfusion/ej2-react-charts"
+import { stackedCustomSeries,stackedPrimaryXAxis, stackedPrimaryYAxis } from "../../data/dummy";
 
 const Stacked = () => {
-  return(
-    <ChartComponent>
-      <Inject services = {[Legend, Category, StackingColumnSeries, Tooltip]}/>
-    </ChartComponent>
-  )
+  return <div>Stacked</div>;
 };
 
 export default Stacked;
