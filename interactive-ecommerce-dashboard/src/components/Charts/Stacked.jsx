@@ -8,6 +8,7 @@ import {
   Category,
   stackingColumnseires,
   Tooltip,
+  StackingColumnSeries,
 } from "@syncfusion/ej2-react-charts";
 import {
   stackedCustomSeries,
@@ -15,8 +16,17 @@ import {
   stackedPrimaryYAxis,
 } from "../../data/dummy";
 
-const Stacked = () => {
-  return <div>Stacked</div>;
+const Stacked = ({width , height }) => {
+  return(
+    <ChartComponent
+     widht = {width}
+     height = {height}
+     id = "stack chart"
+     primaryXAxis = {stackedPrimaryXAxis}
+     primaryYAxis = {stackedPrimaryYAxis}>
+      <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]}/>
+    </ChartComponent>
+  )
 };
 
 export default Stacked;
