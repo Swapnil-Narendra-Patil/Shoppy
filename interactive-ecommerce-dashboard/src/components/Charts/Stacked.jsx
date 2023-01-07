@@ -17,7 +17,11 @@ import {
 } from "../../data/dummy";
 
 const Stacked = () => {
-  return <div>Stacked</div>;
+  return(
+    <ChartComponent>
+      <Inject services = {[Legend, Category, StackingColumnSeries, Tooltip]}/>
+    </ChartComponent>
+  )
 };
 
 export default Stacked;
