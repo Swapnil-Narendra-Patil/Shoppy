@@ -1,6 +1,7 @@
 {
   "name": "project_syncfusion_dashboard",
   "version": "0.1.0",
+  "homepage": "https://gitname.github.io/Interactive-Ecommerce_Dashboard",
   "private": true,
   "dependencies": {
     "@syncfusion/ej2": "^19.4.48",
@@ -20,6 +21,8 @@
     "react-scripts": "^5.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,6 +54,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.19"
   }
