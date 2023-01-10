@@ -1,1 +1,1 @@
-https://swapnil-narendra-patil.github.io/Intercative-Ecommerce_Dashboard/
+https://swapnil-narendra-patil.github.io/Shoppy/
